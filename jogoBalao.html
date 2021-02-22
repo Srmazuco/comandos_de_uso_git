@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bola{
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 25px;
+            position: absolute;
+        }
+    </style>
+    <script>
+        function addbola() {
+        var bola = document.createElement("div");
+        bola.setAttribute("class","bola");
+        var p1 = Math.floor(Math.random()*500);
+        var p2 = Math.floor(Math.random()*400);
+        var cor = Math.floor(Math.random()*200);
+        bola.setAttribute("style", "left:"+p1+"px; top:"+p2+"px; background-color:RGB("+cor+","+cor+","+cor+");");
+        document.body.appendChild(bola);
+        bola.setAttribute("onclick","estourar(this)");
+        }
+        function estourar(element){
+        document.body.removeChild(element);
+        }
+        function iniciar(){
+        setInterval(addbola,1000);
+        }
+    </script>
+</head>
+<body onload="iniciar()">
+    
+</body>
+</html>
