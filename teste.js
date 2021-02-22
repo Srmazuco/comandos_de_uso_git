@@ -1,1 +1,1 @@
-Fiz uma modificacao aleatoria em nada.
+alert('Funciona');
