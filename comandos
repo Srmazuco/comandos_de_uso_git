@@ -1,0 +1,82 @@
+GIT - CONTROLE DE VERSIONAMENTO
+
+
+/1/ Configuraçao de uso "PESSOAL"
+git config --global user.name "Matheus Mazuco"
+git config --global user.email "mazucomatheusj@.com.br"
+git config --global core.editor vscode
+
+git config user.name 
+git config --list
+/1/
+
+/2 Iniciando um repositorio/
+    git init
+/2/
+
+/3/ Branch( VERSOES DO SISTEMA ) - README( DESCRICAO DO SISTEMA, PROJETO, MANUAL ) - commit ( ALTERACOES NO SISTEMA MODIFICACOES )
+    git status
+    git add .A (PEGA TODOS OS BRANCH QUE NAO ESTAO SENDO MONITORADOS)
+    git add README.md
+    git commit -m "Mensagem" 
+    git log ( MONITORA OS COMMIT )
+/3/
+
+/4/Revertendo Modificacoes
+    git reset --soft( VOLTA ANTES DO COMMIT SER FEITO ) mixed( E NECESSARIO FAZER O ADD NOVAMENTE ) hard( VOLTA TOTALMENTE PRO COMMIT ANTERIOR )
+
+/4/
+
+/5/  Tipos de Branches
+    git branch ( LISTA TODOS OS BRANCHES )
+    git branch teste ( CRIA UM NOVO BRANCH )
+    git checkout teste ( MUDA O BRANCH )
+/5/
+
+/6/ Diferenca entre arquivos
+    git diff ( MOSTRA O QUE FOI ALTERADO DENTRO DO ARQUIVO )
+    git diff --name-only ( MOSTRA QUAIS ARQUIVOS FORAM MEXIDOS OU ALTERADOS )
+    git diff style.css ( SELECIONA O ARQUIVO QUE FOI ALTERADO DENTRE OS OUTROS )
+    git checkout HEAD --style.css ( CANCELA TODAS AS ALTERACOES E RETORNA AO CONTEUDO ORIGINAL )
+/6/
+
+/7/ Criando repositorio no GitHub ( ENVIANDO REPOSITORIO PELA LINHA DE COMANDO )
+    git remote add origin https://github.com/Srmazuco/github-pages.git
+    git branch -M main 
+    git push -u origin main
+/7/
+
+/8/ Fazendo alterações no repositório remoto
+    git status
+    git add index.html
+    git commit -m "Mensagem"
+    git log
+    git status
+    git push origin main
+/8/
+
+/9/ Ignorando arquivos do repositório (gitignore)
+    criar um arquivo com o nome gitignore e colocar quais " DADOS OU INFO NAO SERAO MOSTRADAS "
+/9/
+
+/10/ Revertendo sem perder o código (Revert)
+    git revert --no-edit 7bbioeu120 ( VOLTA PARA O COMMIT ORIGINAL )
+/10/
+
+/11/ Deletando branches locais e remotos
+    git push origin teste ( ADICIONA O NOVO BRANCH ) -REMOTO
+    git push origin :teste ( DELETA O NOVO BRANCH ) -REMOTO
+    GIT branch -D teste ( DELETA O BRANCH ) -LOCAL
+/11/
+
+/12/ Puxando alterações de outras pessoas (PULL)
+    git push origin main ( ATUALIZA OS COMMITS )
+    git pull origin master ( PUXA AS ALTERACOES FEITAS NO REPOSITORIO REMOTO )
+
+/12/
+
+/13/ Clonando repositorio remoto
+    git clone https://github.com/Srmazuco/comandos_de_uso_git/tree/main
+/13/
+
+03031901
